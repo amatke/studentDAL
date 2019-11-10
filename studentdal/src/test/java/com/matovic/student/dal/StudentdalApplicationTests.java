@@ -33,5 +33,13 @@ class StudentdalApplicationTests {
 		Student student = studentRepository.findById(1l).get();
 		System.out.println(student);
 	}
+	
+	@Test
+	public void findUpdateStudent() {
+		
+		Student student = studentRepository.findById(1l).get();
+		student.setFee(50d);
+		studentRepository.save(student);
+	}
 
 }
